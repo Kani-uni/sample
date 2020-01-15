@@ -1,0 +1,18 @@
+/*タブレット*/
+@media all and (max-width: 1000px) {
+  
+}
+
+/*スマホ*/
+@media all and (max-width: 670px) {
+  .header-right{
+    display:none;
+  }
+  .menu-icon{
+    display:block;
+    float:right;
+    color:white;
+    font-size:25px;
+    padding-top:21px;
+  }
+}
