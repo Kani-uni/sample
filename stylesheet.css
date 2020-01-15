@@ -1,12 +1,17 @@
 body {
 	margin: 0;
 }
+li {
+	list-style: none;
+}
 a {
 	text-decoration: none;
 }
 .container {
-	width:1000px;
+	width: 1000px;
+	margin: auto;
 }
-.topwrapper{
-	background-image:Url();
+.daywrapper{
+	background-image: url(img_day.jpg);
+	background-size: cover;
 }
