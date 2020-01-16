@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	background-color: #ffefef;
 }
 li {
 	list-style: none;
@@ -11,7 +12,140 @@ a {
 	width: 1000px;
 	margin: auto;
 }
+header {
+	height: 70px;
+	width: 100%;
+	background-color: rgba(30, 50, 54, 0.9);
+	position :fixed;
+	top: 0;
+	z-index: 10;
+}
+#logo{
+	width: 150px;
+	margin: 25px 0 0 15px;
+}
 .daywrapper{
-	background-image: url(img_day.jpg);
+	background-image: url('imgDay.jpg');
 	background-size: cover;
+	padding: 150px 0 150px 0;
+	text-align: right;
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+section {
+  padding: 20px 40px;
+}
+h1{
+	color: #333;
+	background-color: rgba(230, 230, 230, 0.8);
+	margin: auto;
+}
+.nightwrapper{
+	background-image: url('imgNight.jpg');
+	background-size: cover;
+	padding: 150px 0 150px 0;
+	text-align: left;
+	margin-bottom: 50px;
+	margin-top: 10px;
+}
+h2{
+	color: #f8f8f8;
+	background-color: rgba(40, 40, 40, 0.8);
+	margin: auto;
+}
+.mainwrapper{
+	text-align: center;
+}
+/*戻るボタン用*/
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%;
+}
+#page-top a {
+	background: #333;
+	text-decoration: none;
+	color: #fff;
+	width: 100px;
+	padding: 30px 0;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+}
+#page-top a:hover {
+	text-decoration: none;
+	background: #999;
+}
+h4{
+	color: #333;
+	font-size: 30px;
+}
+.main p{
+	color: #333;
+	font-size: 13px;
+}
+.main img{
+	margin: 50px 0 20px 0;
+	height: 400px;
+}
+
+/*スクロールイベント*/
+.scroll-animation-obj {
+	opacity: 0;
+	transition: all 0.5s ease 0.5s;
+}
+.scroll-animation-hop {
+	transform: translate(0,60px);
+}
+.scroll-animation-left {
+	transform: translate(-120px,0);
+}
+.scroll-animation-right {
+	transform: translate(120px,0);
+}
+
+/*faq wrapper*/
+.faq-wrapper {
+  background-color: #e6ecf0;
+  text-align: center;
+  padding-bottom: 80px;
+  color: #5f5d60;
+}
+
+#faq-list {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid #ccc;
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+
+.faq-list-item h3 {
+  font-size: 14px;
+}
+
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:#ccc;
+  font-size:13px;
+}
+
+.answer {
+  font-size: 12px;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+  display:none;
+}
+.open {
+  display:block;
 }
