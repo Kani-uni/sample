@@ -1,11 +1,5 @@
 $(function(){
 
-	$('.main').hover(function(){
-		$(this).find('p').addClass('text-active');
-		},function(){
-		$(this).find('p').removeClass('text-active');
-	});
-
 	//スクロールに応じてTOPボタンの表示を切り替える（https://www.webopixel.net/javascript/538.html）
 	var topBtn = $('#page-top');    
 	topBtn.hide();
@@ -89,17 +83,33 @@ $(function(){
 		});
 	});
 
-	 $('.faq-list-item').click(function(){
-    var $answer = $(this).find('.answer');
-    if($answer.hasClass('open')){
-      $answer.slideUp();
-      $(this).find('span').text('+');
-      $answer.removeClass('open');
-    }else{
-      $answer.slideUp();
-      $(this).find('span').text('-');
-      $answer.addClass('open');
-    }
-  });
+	//ゆっくりスクロール(http://kyasper.com/jquery-tips/)//
+	$(function(){
+	// #で始まるアンカーをクリックした場合に処理
+		$('a[href^=#]').click(function() {
+		var speed = 400; // ミリ秒
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		$('body,html').animate({scrollTop:position}, speed, 'swing');
+		return false;
+		});
+	});
 
+	// 新規登録モーダル
+	$('.signup-show').click(function() {
+		$('#signup-modal').fadeIn();
+	});
+	$('#close-modal').click(function() {
+		$('#signup-modal').fadeOut();
+	});
+
+	// ログインモーダル
+	$('.login-show').click(function() {
+		$('#login-modal').fadeIn();
+	});
+	$('#login-modal').click(function() {
+		$('#login-modal').fadeOut();
+	});
+	
 });

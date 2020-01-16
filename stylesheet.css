@@ -2,59 +2,12 @@ body {
 	margin: 0;
 	background-color: #ffefef;
 }
-li {
-	list-style: none;
-}
 a {
 	text-decoration: none;
 }
 .container {
 	width: 1000px;
 	margin: auto;
-}
-header {
-	height: 70px;
-	width: 100%;
-	background-color: rgba(30, 50, 54, 0.9);
-	position :fixed;
-	top: 0;
-	z-index: 10;
-}
-#logo{
-	width: 150px;
-	margin: 25px 0 0 15px;
-}
-.daywrapper{
-	background-image: url('imgDay.jpg');
-	background-size: cover;
-	padding: 150px 0 150px 0;
-	text-align: right;
-	margin-bottom: 10px;
-	margin-top: 50px;
-}
-section {
-  padding: 20px 40px;
-}
-h1{
-	color: #333;
-	background-color: rgba(230, 230, 230, 0.8);
-	margin: auto;
-}
-.nightwrapper{
-	background-image: url('imgNight.jpg');
-	background-size: cover;
-	padding: 150px 0 150px 0;
-	text-align: left;
-	margin-bottom: 50px;
-	margin-top: 10px;
-}
-h2{
-	color: #f8f8f8;
-	background-color: rgba(40, 40, 40, 0.8);
-	margin: auto;
-}
-.mainwrapper{
-	text-align: center;
 }
 /*戻るボタン用*/
 #page-top {
@@ -77,19 +30,7 @@ h2{
 	text-decoration: none;
 	background: #999;
 }
-h4{
-	color: #333;
-	font-size: 30px;
-}
-.main p{
-	color: #333;
-	font-size: 13px;
-}
-.main img{
-	margin: 50px 0 20px 0;
-	height: 400px;
-}
-
+/*戻るボタンここまで*/
 /*スクロールイベント*/
 .scroll-animation-obj {
 	opacity: 0;
@@ -104,48 +45,248 @@ h4{
 .scroll-animation-right {
 	transform: translate(120px,0);
 }
+/*スクロールここまで*/
+/*フェードイン*/
+.fadeIn {
+	transition: 1s;
+	opacity: 0;
+}
+.fadeIn.animated {
+	opacity: 1;
+}
+/*登録ボタン*/
+.btn {
+	padding: 8px 24px;
+	color: white;
+	display: inline-block;
+	opacity: 0.8;
+	border-radius: 4px;
+	background-color: #ff6644;
+}
+/*モーダル指定*/
+.modal-wrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+}
+.modal {
+	position: absolute;
+	top: 20%;
+	left: 34%;
+	background-color: #eeeff0;
+	padding: 20px 0 20px 0;
+	border-radius: 10px;
+	width: 450px;
+	height: auto;
+	text-align: center;
+}
+.close {
+	position: absolute;
+	top: 5px;
+	right: 25px;
+	color: rgba(140, 140, 140, 0.5);
+	cursor: pointer;
+}
 
-/*faq wrapper*/
+/*登録フォーム*/
+#signup-form {
+	width: 100%;
+}
+#signup-form h2 {
+	color: #5f5d60;
+	letter-spacing: 1px;
+	margin-bottom: 40px;
+}
+#signup-form input {
+	width: 300px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	padding: 12px 12px;
+	border: 1px solid #d0d5d8;
+	border-radius: 5px;
+}
+#login-form {
+	width: 100%;
+}
+#login-form h2 {
+	color: #5f5d60;
+	letter-spacing: 1px;
+	margin-bottom: 40px;
+}
+#login-form input {
+	width: 300px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	padding: 12px 12px;
+	border: 1px solid #d0d5d8;
+	border-radius: 5px;
+}
+#submit-btn {
+	display: inline-block;
+	padding: 15px 100px;
+	background-color: #ff6644;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	margin: 10px auto;
+	cursor: pointer;
+}
+.textbox{
+	padding: 20px 50px 20px 50px;
+}
+/*header*/
+header {
+	height: 70px;
+	width: 100%;
+	background-color: rgba(30, 50, 54, 0.9);
+	position :fixed;
+	top: 0;
+	z-index: 10;
+}
+#logo{
+	width: 150px;
+	margin: 25px 0 0 15px;
+}
+.header-left{
+	float: left;
+}
+.header-right{
+	float: right;
+	color: #eee;
+}
+.header-right a{
+	line-height: 70px;
+	padding: 0 20px;
+	color: #eee;
+	display: block;
+	float: left;
+}
+#login-head{
+	line-height: 70px;
+	padding: 0 20px;
+	color: #eee;
+	display: block;
+	float: left;
+}
+/*top*/
+.flowerline{
+	background-image: url('flowers.jpg');
+	background-size: cover;
+	height: 150px;
+}
+.daywrapper{
+	background-image: url('imgDay.jpg');
+	background-size: cover;
+	padding: 150px 0 150px 0;
+	text-align: right;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+section {
+  padding: 20px 40px;
+}
+h1{
+	color: #333;
+	background-color: rgba(230, 230, 230, 0.8);
+	margin: auto;
+}
+.nightwrapper{
+	background-image: url('imgNight.jpg');
+	background-size: cover;
+	padding: 150px 0 150px 0;
+	text-align: left;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+h2{
+	color: #f8f8f8;
+	background-color: rgba(40, 40, 40, 0.8);
+	margin: auto;
+}
+/*Main*/
+.mainwrapper{
+	text-align: center;
+}
+
+h3{
+	color: #333;
+	font-size: 30px;
+}
+.main p{
+	color: #333;
+	font-size: 18px;
+	text-align: center;
+}
+.main img{
+	margin: 20px 0 20px 0;
+	height: 300px;
+}
+
+/*faq*/
+h4{
+	color: #f8f8f8;
+	background-color: rgba(40, 40, 40, 0.8);
+	margin: auto;
+	padding-left: 10px;
+	font-size: 28px;
+}
+h5{
+	color: #333;
+	margin: auto;
+	font-size: 16px;
+}
 .faq-wrapper {
-  background-color: #e6ecf0;
-  text-align: center;
-  padding-bottom: 80px;
-  color: #5f5d60;
+	text-align: center;
+	padding-bottom: 80px;
+	color: #5f5d60;
 }
-
 #faq-list {
-  width: 500px;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
+	width: 800px;
+	margin: auto;
+	padding: 0;
+	list-style: none;
 }
-
 .faq-list-item {
-  margin:10px;
-  border-bottom:1px solid #ccc;
-  position:relative;
-  cursor:pointer;
-  text-align: left;
+	margin:10px;
+	position:relative;
+	text-align: left;
 }
-
-.faq-list-item h3 {
-  font-size: 14px;
-}
-
-.faq-list-item span {
-  position:absolute;
-  top:0;
-  right:5px;
-  color:#ccc;
-  font-size:13px;
-}
-
 .answer {
-  font-size: 12px;
-  padding: 5px 0px;
-  margin-bottom: 15px;
-  display:none;
+	font-size: 15px;
+	padding: 5px 0px;
+	margin-bottom: 15px;
 }
-.open {
-  display:block;
+
+/*sale*/
+.sale-wrapper{
+	padding-bottom: 100px;
+}
+#sale-list{
+	width: 800px;
+	margin: auto;
+	padding: 0;
+}
+#sale li {
+	width: 800px;
+	list-style-type: disc;
+}
+#sale-btn{
+	margin-top: 50px;
+	text-align: center;
+}
+
+/*footer*/
+footer{
+	height: 80px;
+}
+h6{
+	font-size: 27px;
+	color: #ccc;
+	line-height: 80px;
+	padding-left: 30px;
 }
